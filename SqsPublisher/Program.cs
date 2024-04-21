@@ -36,4 +36,3 @@ var sendMessageRequest = new SendMessageRequest
 
 var response = await sqsClient.SendMessageAsync(sendMessageRequest);
 
-Console.WriteLine(response.ToString());

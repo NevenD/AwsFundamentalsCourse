@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8.Lambda", "8.Lambda", "{DC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqsPublisher", "SqsPublisher\SqsPublisher.csproj", "{B1DF784E-3E68-4D8E-B091-FB4A473986C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqsConsumer", "SqsConsumer\SqsConsumer.csproj", "{702AFEFC-D5A3-450B-8593-0D86C27956C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,12 +29,17 @@ Global
 		{B1DF784E-3E68-4D8E-B091-FB4A473986C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1DF784E-3E68-4D8E-B091-FB4A473986C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1DF784E-3E68-4D8E-B091-FB4A473986C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{702AFEFC-D5A3-450B-8593-0D86C27956C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{702AFEFC-D5A3-450B-8593-0D86C27956C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{702AFEFC-D5A3-450B-8593-0D86C27956C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{702AFEFC-D5A3-450B-8593-0D86C27956C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B1DF784E-3E68-4D8E-B091-FB4A473986C3} = {AE28BEE1-B578-439A-B596-D991B9851F5A}
+		{702AFEFC-D5A3-450B-8593-0D86C27956C3} = {AE28BEE1-B578-439A-B596-D991B9851F5A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {182AEF4E-920D-4267-9B49-F4AE94B87DEC}
