@@ -16,7 +16,6 @@ namespace Customers.Consumer.Handlers
         public Task Handle(CustomerCreated request, CancellationToken cancellationToken)
         {
             _logger.LogInformation(request.FullName);
-
             return Task.CompletedTask;
         }
     }

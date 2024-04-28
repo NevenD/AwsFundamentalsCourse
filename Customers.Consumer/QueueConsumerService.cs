@@ -38,7 +38,6 @@ namespace Customers.Consumer
 
             while (!stoppingToken.IsCancellationRequested)
             {
-
                 var response = await _sqs.ReceiveMessageAsync(receieveMessageRequest, stoppingToken);
 
                 foreach (var message in response.Messages)
