@@ -1,5 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Sqs", "3.Sqs", "{AE28BEE1-B578-439A-B596-D991B9851F5A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Sns", "4.Sns", "{BA648C25-CB9E-4FAA-AF91-86A37CCEA382}"
@@ -12,9 +15,54 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.SecretsManager", "7.Secre
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8.Lambda", "8.Lambda", "{DC84F474-F046-44B8-8D2E-BCE6A285FDF5}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqsPublisher", "SqsPublisher\SqsPublisher.csproj", "{B1DF784E-3E68-4D8E-B091-FB4A473986C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqsConsumer", "SqsConsumer\SqsConsumer.csproj", "{702AFEFC-D5A3-450B-8593-0D86C27956C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customers.Api", "3.Sqs\Customers.Api\Customers.Api.csproj", "{09E52805-77E2-4AD5-90CB-C8D765DD93A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customers.Consumer", "Customers.Consumer\Customers.Consumer.csproj", "{474F8099-C178-424E-A05B-A9D570D20108}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnsPublisher", "SnsPublisher\SnsPublisher.csproj", "{BADACC4E-9C30-47C4-AC8F-A3159ACF1F50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1DF784E-3E68-4D8E-B091-FB4A473986C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1DF784E-3E68-4D8E-B091-FB4A473986C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1DF784E-3E68-4D8E-B091-FB4A473986C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1DF784E-3E68-4D8E-B091-FB4A473986C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{702AFEFC-D5A3-450B-8593-0D86C27956C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{702AFEFC-D5A3-450B-8593-0D86C27956C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{702AFEFC-D5A3-450B-8593-0D86C27956C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{702AFEFC-D5A3-450B-8593-0D86C27956C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09E52805-77E2-4AD5-90CB-C8D765DD93A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E52805-77E2-4AD5-90CB-C8D765DD93A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E52805-77E2-4AD5-90CB-C8D765DD93A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E52805-77E2-4AD5-90CB-C8D765DD93A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{474F8099-C178-424E-A05B-A9D570D20108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{474F8099-C178-424E-A05B-A9D570D20108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{474F8099-C178-424E-A05B-A9D570D20108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{474F8099-C178-424E-A05B-A9D570D20108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BADACC4E-9C30-47C4-AC8F-A3159ACF1F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BADACC4E-9C30-47C4-AC8F-A3159ACF1F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BADACC4E-9C30-47C4-AC8F-A3159ACF1F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BADACC4E-9C30-47C4-AC8F-A3159ACF1F50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B1DF784E-3E68-4D8E-B091-FB4A473986C3} = {AE28BEE1-B578-439A-B596-D991B9851F5A}
+		{702AFEFC-D5A3-450B-8593-0D86C27956C3} = {AE28BEE1-B578-439A-B596-D991B9851F5A}
+		{09E52805-77E2-4AD5-90CB-C8D765DD93A7} = {AE28BEE1-B578-439A-B596-D991B9851F5A}
+		{474F8099-C178-424E-A05B-A9D570D20108} = {AE28BEE1-B578-439A-B596-D991B9851F5A}
+		{BADACC4E-9C30-47C4-AC8F-A3159ACF1F50} = {BA648C25-CB9E-4FAA-AF91-86A37CCEA382}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {182AEF4E-920D-4267-9B49-F4AE94B87DEC}
 	EndGlobalSection
 EndGlobal
