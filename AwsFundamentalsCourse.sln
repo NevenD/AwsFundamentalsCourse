@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customers.Consumer", "Custo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnsPublisher", "SnsPublisher\SnsPublisher.csproj", "{BADACC4E-9C30-47C4-AC8F-A3159ACF1F50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomersDynamo.Api", "CustomersDynamo.Api\CustomersDynamo.Api.csproj", "{56AC8014-9267-4ABE-9C65-29B831BFA147}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomersDynamo.Api", "CustomersDynamo.Api\CustomersDynamo.Api.csproj", "{56AC8014-9267-4ABE-9C65-29B831BFA147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesDynamo.Api", "MoviesDynamo.Api\MoviesDynamo.Api.csproj", "{A59F4564-A961-4BD6-BDC2-036907CA3C93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{56AC8014-9267-4ABE-9C65-29B831BFA147}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56AC8014-9267-4ABE-9C65-29B831BFA147}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56AC8014-9267-4ABE-9C65-29B831BFA147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A59F4564-A961-4BD6-BDC2-036907CA3C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A59F4564-A961-4BD6-BDC2-036907CA3C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A59F4564-A961-4BD6-BDC2-036907CA3C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A59F4564-A961-4BD6-BDC2-036907CA3C93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +74,7 @@ Global
 		{474F8099-C178-424E-A05B-A9D570D20108} = {AE28BEE1-B578-439A-B596-D991B9851F5A}
 		{BADACC4E-9C30-47C4-AC8F-A3159ACF1F50} = {BA648C25-CB9E-4FAA-AF91-86A37CCEA382}
 		{56AC8014-9267-4ABE-9C65-29B831BFA147} = {2C17779A-FD5B-4980-BEB0-4A19912178B7}
+		{A59F4564-A961-4BD6-BDC2-036907CA3C93} = {2C17779A-FD5B-4980-BEB0-4A19912178B7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {182AEF4E-920D-4267-9B49-F4AE94B87DEC}
