@@ -2,6 +2,7 @@
 using Amazon.DynamoDBv2.DocumentModel;
 using Amazon.DynamoDBv2.Model;
 using CustomersDynamo.Api.Contracts.Data;
+using CustomersDynamo.Api.Domain;
 using System.Net;
 using System.Text.Json;
 
@@ -111,4 +112,31 @@ public class CustomerRepository : ICustomerRepository
 
         return response.HttpStatusCode == HttpStatusCode.OK;
     }
+
+    public async Task<Customer?> GetByEmailAsync(string email)
+    {
+        var queryRequest = new QueryRequest
+        {
+            TableName = _tableName,
+            IndexName = "email-id-index",
+            KeyConditionExpression = "Email = :v_Email",
+            ExpressionAttributeValues = new Dictionary<string, AttributeValue>
+            {
+                {":v_Email", new AttributeValue {S = email} },
+            }
+        };
+
+        var response = await _dynamoDb.QueryAsync(queryRequest);
+
+        if (response.Items.Count == 0)
+        {
+            return null;
+        }
+
+        var iteAsDocument = Document.FromAttributeMap(response.Items[0]);
+        return JsonSerializer.Deserialize<Customer?>(iteAsDocument.ToJson());
+
+    }
+
+
 }

@@ -13,4 +13,6 @@ public interface ICustomerService
     Task<bool> UpdateAsync(Customer customer);
 
     Task<bool> DeleteAsync(Guid id);
+
+    Task<Customer?> GetByEmailAsync(string email);
 }

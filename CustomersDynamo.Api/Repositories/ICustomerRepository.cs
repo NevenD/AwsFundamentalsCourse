@@ -1,4 +1,5 @@
 ﻿using CustomersDynamo.Api.Contracts.Data;
+using CustomersDynamo.Api.Domain;
 
 namespace CustomersDynamo.Api.Repositories;
 
@@ -13,4 +14,6 @@ public interface ICustomerRepository
     Task<bool> UpdateAsync(CustomerDto customer);
 
     Task<bool> DeleteAsync(Guid id);
+
+    Task<Customer?> GetByEmailAsync(string email);
 }

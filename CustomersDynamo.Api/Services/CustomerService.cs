@@ -76,4 +76,10 @@ public class CustomerService : ICustomerService
             new ValidationFailure(paramName, message)
         };
     }
+
+    public async Task<Customer?> GetByEmailAsync(string email)
+    {
+        var customerDto = await _customerRepository.GetByEmailAsync(email);
+        return customerDto;
+    }
 }
