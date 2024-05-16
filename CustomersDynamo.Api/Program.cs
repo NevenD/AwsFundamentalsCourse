@@ -1,3 +1,4 @@
+using Amazon.DynamoDBv2;
 using CustomersDynamo.Api.Repositories;
 using CustomersDynamo.Api.Services;
 using CustomersDynamo.Api.Validation;
@@ -29,9 +30,11 @@ builder.Services.AddSingleton<ICustomerRepository, CustomerRepository>();
 builder.Services.AddSingleton<ICustomerService, CustomerService>();
 builder.Services.AddSingleton<IGitHubService, GitHubService>();
 
+builder.Services.AddSingleton<IAmazonDynamoDB, AmazonDynamoDBClient>();
+
 builder.Services.AddHttpClient("GitHub", httpClient =>
 {
-    httpClient.BaseAddress = new Uri(config.GetValue<string>("GitHub:ApiBaseUrl")!);
+    httpClient.BaseAddress = new Uri("https://api.github.com");
     httpClient.DefaultRequestHeaders.Add(
         HeaderNames.Accept, "application/vnd.github.v3+json");
     httpClient.DefaultRequestHeaders.Add(
