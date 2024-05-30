@@ -24,16 +24,16 @@ public class CustomerController : ControllerBase
 
         var customerResponse = customer.ToCustomerResponse();
 
-        return CreatedAtAction("Get", new { customerResponse.Id }, customerResponse);
+        return Ok(customerResponse);
     }
-
 
     [HttpGet("customers/{idOrEmail}")]
     public async Task<IActionResult> Get([FromRoute] string idOrEmail)
     {
         var isGuid = Guid.TryParse(idOrEmail, out var id);
 
-        var customer = isGuid ? await _customerService.GetAsync(id) : await _customerService.GetByEmailAsync(idOrEmail);
+        var customer = isGuid ? await _customerService.GetAsync(id)
+                : await _customerService.GetByEmailAsync(idOrEmail);
 
         if (customer is null)
         {
